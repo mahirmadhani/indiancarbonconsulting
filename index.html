@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Carbon Consultancy | ESG & Carbon Credits</title>
+    <meta name="description"
+        content="India's leading carbon credits and sustainability consultancy for MSMEs and industries. We help you measure, reduce, and monetize your carbon footprint.">
+    <meta name="keywords"
+        content="carbon credits india, carbon consulting india, MSME sustainability consulting, carbon market india, ESG consulting india">
+
+    <!-- SEO Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ConsultingFirm",
+      "name": "Indian Carbon Consultancy",
+      "description": "India's leading carbon credits and sustainability consultancy for MSMEs and industries.",
+      "url": "https://www.indiancarbonconsultancy.com",
+      "areaServed": "India",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                        },
+                        earth: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cec7',
+                            400: '#d2bab0',
+                            500: '#a18072',
+                            600: '#977669',
+                            700: '#846358',
+                            800: '#43302b',
+                            900: '#2c1e1a',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis for Smooth Scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- App Styles -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-earth-50 text-gray-900 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 isolate" id="navbar">
+        <div class="absolute inset-0 bg-white/80 backdrop-blur-md z-[-1] border-b border-earth-200" id="nav-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24 md:h-28">
+                <a href="#" class="flex items-center">
+                    <img src="assets/icc_logo-removebg-preview.png" alt="Indian Carbon Consultancy Logo"
+                        class="h-20 md:h-28 w-auto object-contain transform scale-110 origin-left">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about"
+                        class="text-gray-600 hover:text-brand-600 text-sm font-medium transition-colors">About Us</a>
+                    <a href="#services"
+                        class="text-gray-600 hover:text-brand-600 text-sm font-medium transition-colors">Services</a>
+                    <a href="#industries"
+                        class="text-gray-600 hover:text-brand-600 text-sm font-medium transition-colors">Industries</a>
+                    <a href="#opportunities"
+                        class="text-gray-600 hover:text-brand-600 text-sm font-medium transition-colors">Opportunities</a>
+                    <a href="#contact"
+                        class="px-5 py-2.5 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-brand-600 transition-colors shadow-lg shadow-gray-900/20">Get
+                        Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-earth-200 absolute w-full left-0 top-24 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#about"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md">About
+                    Us</a>
+                <a href="#services"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md">Services</a>
+                <a href="#industries"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md">Industries</a>
+                <a href="#opportunities"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md">Opportunities</a>
+                <a href="#contact"
+                    class="block w-full text-center mt-4 px-5 py-3 rounded-md bg-gray-900 text-white font-medium hover:bg-brand-600">Get
+                    Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-gray-950">
+            <!-- Background Image with Parallax effect -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/hero_bg.png" alt="Earth glowing with green energy lines"
+                    class="w-full h-full object-cover opacity-40 hero-bg-img" />
+                <div class="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/50 to-gray-950"></div>
+            </div>
+
+            <!-- Content -->
+            <div
+                class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center mt-16">
+
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 backdrop-blur-sm mb-8 hero-element opacity-0 translate-y-8">
+                    <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                    <span class="text-brand-300 text-sm font-medium tracking-wide">Pioneering India's Net Zero
+                        Journey</span>
+                </div>
+
+                <h1
+                    class="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.1] mb-6 hero-element opacity-0 translate-y-8">
+                    Accelerating India's Transition to a <br class="hidden lg:block" />
+                    <span class="text-gradient-light">Low-Carbon Economy</span>
+                </h1>
+
+                <p
+                    class="text-lg md:text-xl text-gray-300 max-w-3xl mb-12 font-light hero-element opacity-0 translate-y-8">
+                    Helping MSMEs and industries measure, reduce, and monetize their carbon footprint through expertly
+                    curated carbon credits and sustainability strategies.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 hero-element opacity-0 translate-y-8">
+                    <a href="#contact"
+                        class="px-8 py-4 rounded-full bg-brand-600 text-white font-medium hover:bg-brand-500 transition-all shadow-[0_0_30px_rgba(22,163,74,0.3)] hover:shadow-[0_0_40px_rgba(34,197,94,0.5)] transform hover:-translate-y-1">
+                        Book a Consultation
+                    </a>
+                    <a href="#opportunities"
+                        class="px-8 py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/20 backdrop-blur-md transition-all border border-white/10 group flex items-center justify-center gap-2">
+                        Explore Carbon Opportunities
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Floating metrics -->
+                <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl opacity-0 hero-metrics">
+                    <div class="glass-dark p-4 rounded-2xl flex flex-col items-center">
+                        <span class="text-2xl font-bold text-brand-400 mb-1">2070</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">India Net Zero</span>
+                    </div>
+                    <div class="glass-dark p-4 rounded-2xl flex flex-col items-center">
+                        <span class="text-2xl font-bold text-brand-400 mb-1">$900B+</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Carbon Market</span>
+                    </div>
+                    <div class="glass-dark p-4 rounded-2xl flex flex-col items-center">
+                        <span class="text-2xl font-bold text-brand-400 mb-1">63M+</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">MSMEs in India</span>
+                    </div>
+                    <div class="glass-dark p-4 rounded-2xl flex flex-col items-center">
+                        <span class="text-2xl font-bold text-brand-400 mb-1">Tier 1</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Consulting</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
+                <span class="text-white/50 text-xs font-medium uppercase tracking-widest mb-2">Scroll</span>
+                <i data-lucide="chevron-down" class="text-white/50 w-5 h-5"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <!-- Text Content -->
+                    <div class="about-content opacity-0 translate-x-[-50px]">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-6">
+                            Who We Are
+                        </div>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            Your Partner in <br>
+                            <span class="text-gradient">Sustainable Growth</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Indian Carbon Consultancy helps businesses measure their carbon footprint, reduce emissions,
+                            and unlock new revenue streams through carbon markets.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed font-medium">
+                            We specialize in helping <strong class="text-brand-700">MSMEs access sustainability
+                                frameworks, carbon credit projects, and government climate schemes.</strong>
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="bar-chart-3" class="w-6 h-6 text-brand-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Carbon Footprint</h4>
+                                    <p class="text-sm text-gray-500">Accurate assessment and reporting</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center shrink-0">
+                                    <i data-lucide="landmark" class="w-6 h-6 text-brand-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Government Schemes</h4>
+                                    <p class="text-sm text-gray-500">Access to climate incentives</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual / Stats -->
+                    <div class="relative about-visual opacity-0 translate-x-[50px]">
+                        <!-- Decorative Blob -->
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-100/50 rounded-full blur-[80px] -z-10 animate-blob">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6 relative z-10">
+                            <!-- Image Card -->
+                            <div
+                                class="col-span-2 sm:col-span-1 rounded-3xl overflow-hidden shadow-2xl shadow-earth-200 h-64 sm:h-auto">
+                                <img src="assets/about_industry.png" alt="Sustainable Industry"
+                                    class="w-full h-full object-cover" />
+                            </div>
+
+                            <div class="col-span-2 sm:col-span-1 flex flex-col gap-6">
+                                <!-- Stat Card -->
+                                <div
+                                    class="bg-white rounded-3xl p-8 shadow-xl shadow-earth-200/50 border border-earth-100 relative overflow-hidden group">
+                                    <div
+                                        class="absolute top-0 right-0 w-24 h-24 bg-brand-50 rounded-bl-full -z-10 transition-transform group-hover:scale-150">
+                                    </div>
+                                    <i data-lucide="globe-2" class="w-8 h-8 text-brand-500 mb-4"></i>
+                                    <div class="text-4xl font-display font-bold text-gray-900 mb-2 stat-counter"
+                                        data-target="2070">2024</div>
+                                    <p class="text-sm text-gray-500 font-medium uppercase tracking-wide">India Net Zero
+                                    </p>
+                                </div>
+                                <!-- Stat Card -->
+                                <div
+                                    class="bg-gradient-to-br from-brand-600 to-brand-800 rounded-3xl p-8 shadow-xl shadow-brand-900/20 text-white relative overflow-hidden">
+                                    <div
+                                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay">
+                                    </div>
+                                    <i data-lucide="trending-up" class="w-8 h-8 text-brand-300 mb-4"></i>
+                                    <div class="text-4xl font-display font-bold text-white mb-2">$<span
+                                            class="stat-counter" data-target="900">0</span>B+</div>
+                                    <p class="text-sm text-brand-200 font-medium uppercase tracking-wide">Global Market
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-earth-50 relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div
+                class="absolute top-0 right-0 w-1/3 h-[600px] bg-gradient-to-b from-brand-100/40 to-transparent -rotate-12 transform origin-top-right rounded-bl-[100px] -z-10 pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-20 section-header opacity-0 translate-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold mb-4 shadow-sm border border-brand-200/50">
+                        Our Services
+                    </div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        End-to-End <span class="text-gradient">Sustainability Solutions</span>
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        We provide comprehensive advisory and implementation services to help your business thrive in
+                        the new green economy.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Service Card 1 -->
+                    <div
+                        class="service-card bg-white rounded-3xl p-8 shadow-lg shadow-earth-200/40 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group opacity-0 translate-y-12">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-colors duration-300">
+                            <i data-lucide="calculator"
+                                class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Carbon Accounting</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Comprehensive measurement of Scope 1, 2, and 3 emissions aligned with global GHG protocols.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800 transition-colors">
+                            Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div
+                        class="service-card bg-white rounded-3xl p-8 shadow-lg shadow-earth-200/40 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group opacity-0 translate-y-12">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-colors duration-300">
+                            <i data-lucide="file-check"
+                                class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Credit Project Dev</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Develop projects under Verra, Gold Standard, and Indian Carbon Market frameworks from
+                            scratch.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800 transition-colors">
+                            Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div
+                        class="service-card bg-white rounded-3xl p-8 shadow-lg shadow-earth-200/40 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group opacity-0 translate-y-12">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-colors duration-300">
+                            <i data-lucide="line-chart"
+                                class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Carbon Market Advisory</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Navigate complex carbon markets to successfully generate, trade, and sell your carbon
+                            credits.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800 transition-colors">
+                            Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div
+                        class="service-card bg-white rounded-3xl p-8 shadow-lg shadow-earth-200/40 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group opacity-0 translate-y-12">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-colors duration-300">
+                            <i data-lucide="leaf"
+                                class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sustainability & ESG</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Develop robust sustainability roadmaps and ESG reporting to meet investor and regulatory
+                            demands.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800 transition-colors">
+                            Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div
+                        class="service-card md:col-span-2 lg:col-span-2 bg-gradient-to-br from-brand-900 to-brand-950 rounded-3xl p-8 shadow-xl text-white relative overflow-hidden group opacity-0 translate-y-12">
+                        <!-- Abstract overlay -->
+                        <div
+                            class="absolute right-0 bottom-0 w-64 h-64 bg-brand-500/20 rounded-full blur-[60px] pointer-events-none">
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-8 items-center h-full relative z-10">
+                            <div class="flex-1">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-brand-800 flex items-center justify-center mb-6 border border-brand-700">
+                                    <i data-lucide="landmark" class="w-7 h-7 text-brand-300"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Government Scheme Advisory</h3>
+                                <p class="text-brand-100 mb-6 leading-relaxed max-w-xl">
+                                    India offers numerous climate subsidies and MSME sustainability incentives. We guide
+                                    your company through the labyrinth of policies to secure financial benefits.
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-brand-900 font-semibold hover:bg-brand-50 transition-colors">
+                                    Explore Schemes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <div class="hidden md:block w-48 shrink-0">
+                                <img src="assets/govt_building.png" alt="Government Building"
+                                    class="w-full h-full object-cover rounded-2xl opacity-60 mix-blend-luminosity border border-brand-800" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries We Serve Section -->
+        <section id="industries" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 ind-header opacity-0 translate-y-8">
+                    <div class="max-w-2xl">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-4">
+                            Sectors We Empower
+                        </div>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Industries We <span class="text-gradient">Serve</span>
+                        </h2>
+                        <p class="text-lg text-gray-600">
+                            We tailor our sustainability frameworks and carbon credit strategies to the unique
+                            challenges and emission profiles of your specific industry.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Industry Cards -->
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <div
+                            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1508344928928-71e1b531864e?w=500&q=80')] bg-cover opacity-0 group-hover:opacity-20 transition-opacity duration-300 mix-blend-overlay">
+                        </div>
+                        <i data-lucide="factory"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Brick Kilns</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">
+                            Efficiency & emissions</p>
+                    </div>
+
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <div
+                            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500&q=80')] bg-cover opacity-0 group-hover:opacity-20 transition-opacity duration-300 mix-blend-overlay">
+                        </div>
+                        <i data-lucide="recycle"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Plastic Recycling</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">
+                            Circular economy</p>
+                    </div>
+
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <i data-lucide="battery-charging"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Battery Recycling</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">
+                            E-waste management</p>
+                    </div>
+
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <i data-lucide="bird"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Poultry Farms</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">
+                            Methane capture</p>
+                    </div>
+
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <i data-lucide="shirt"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Textiles</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">Water
+                            & energy mgmt</p>
+                    </div>
+
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <i data-lucide="flask-conical"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Chemical Plants</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">
+                            Process optimization</p>
+                    </div>
+
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <i data-lucide="building-2"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Cement & Const.</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">
+                            Alternative fuels</p>
+                    </div>
+
+                    <div
+                        class="ind-card relative bg-earth-50 rounded-2xl p-6 hover:bg-brand-600 hover:text-white transition-all duration-300 group cursor-pointer overflow-hidden border border-earth-100 opacity-0 scale-95">
+                        <i data-lucide="wheat"
+                            class="w-8 h-8 text-gray-700 group-hover:text-white mb-4 transition-colors"></i>
+                        <h4
+                            class="font-semibold text-lg mb-2 text-gray-900 group-hover:text-white relative z-10 transition-colors">
+                            Agriculture</h4>
+                        <p class="text-sm text-gray-500 group-hover:text-white/80 relative z-10 transition-colors">Soil
+                            carbon sequestration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opportunities Section -->
+        <section id="opportunities" class="py-24 bg-gray-950 text-white relative border-y border-gray-900">
+            <!-- Background effects -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-brand-900/30 blur-[120px]">
+                </div>
+                <div
+                    class="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-900/20 blur-[120px]">
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 opp-header opacity-0 translate-y-8">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                        Unlock <span class="text-gradient-light">Carbon Revenue</span>
+                    </h2>
+                    <p class="text-lg text-gray-400">
+                        Convert your sustainability initiatives into tradable commodities. Here are the top pathways for
+                        Indian MSMEs.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project Type Cards -->
+                    <div
+                        class="opp-card bg-gray-900/50 backdrop-blur-md rounded-2xl p-6 border border-gray-800 hover:border-brand-500/50 transition-colors opacity-0 translate-y-8">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center mb-5 border border-gray-700">
+                            <i data-lucide="zap" class="w-6 h-6 text-yellow-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Energy Efficiency</h3>
+                        <p class="text-sm text-gray-400 mb-4">Upgrading machinery, implementing PAT scheme protocols,
+                            and reducing energy intensity per unit of production.</p>
+                        <ul class="text-xs text-brand-300 space-y-1 font-medium">
+                            <li>+ Generates Energy Saving Certs</li>
+                            <li>+ High demand in local markets</li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="opp-card bg-gray-900/50 backdrop-blur-md rounded-2xl p-6 border border-gray-800 hover:border-brand-500/50 transition-colors opacity-0 translate-y-8">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center mb-5 border border-gray-700">
+                            <i data-lucide="sun" class="w-6 h-6 text-orange-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Renewable Energy</h3>
+                        <p class="text-sm text-gray-400 mb-4">Installing solar panels, transition to biomass, or
+                            procuring certified renewable energy for manufacturing units.</p>
+                        <ul class="text-xs text-brand-300 space-y-1 font-medium">
+                            <li>+ International REC Generation</li>
+                            <li>+ Reduces Scope 2 emissions drastically</li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="opp-card bg-gray-900/50 backdrop-blur-md rounded-2xl p-6 border border-gray-800 hover:border-brand-500/50 transition-colors opacity-0 translate-y-8">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center mb-5 border border-gray-700">
+                            <i data-lucide="flame" class="w-6 h-6 text-red-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Waste-to-Energy (Biogas)</h3>
+                        <p class="text-sm text-gray-400 mb-4">Capturing methane from agricultural/poultry waste or
+                            wastewater treatment to generate power and heat.</p>
+                        <ul class="text-xs text-brand-300 space-y-1 font-medium">
+                            <li>+ High premium carbon credits</li>
+                            <li>+ Destroys potent GHG (Methane)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conversion visually -->
+                <div
+                    class="mt-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-1 border border-gray-800 opp-conversion opacity-0">
+                    <div
+                        class="bg-gray-950 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 h-full">
+                        <div class="flex-1 text-center md:text-left">
+                            <h4 class="text-xl font-bold mb-2 text-white">The Conversion Pipeline</h4>
+                            <p class="text-gray-400 text-sm">How your raw data turns into verified monetary assets.</p>
+                        </div>
+                        <div
+                            class="flex-1 flex flex-col md:flex-row items-center gap-4 text-center justify-center font-display font-medium w-full">
+                            <div class="p-4 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 w-full">
+                                Emissions Data</div>
+                            <i data-lucide="arrow-right" class="text-brand-500 hidden md:block"></i>
+                            <i data-lucide="arrow-down" class="text-brand-500 md:hidden"></i>
+                            <div class="p-4 rounded-xl bg-gray-900 border border-brand-500/30 text-brand-300 w-full">
+                                Verification</div>
+                            <i data-lucide="arrow-right" class="text-brand-500 hidden md:block"></i>
+                            <i data-lucide="arrow-down" class="text-brand-500 md:hidden"></i>
+                            <div
+                                class="p-4 rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 text-white w-full border border-brand-500 shadow-[0_0_20px_rgba(22,163,74,0.3)]">
+                                Tradable Credits</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government Schemes Infographic Section -->
+        <section class="py-24 bg-brand-50 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <div class="schemes-content opacity-0 translate-x-[-50px]">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-brand-700 border border-brand-200 text-sm font-semibold mb-6 shadow-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i> Compliance & Subsidies
+                        </div>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Navigate the <br>
+                            <span class="text-brand-700">Indian Regulatory Landscape</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            India is rapidly enacting mandates for high-emission industries and offering lucrative
+                            subsidies for sustainable MSMEs. We ensure you are compliant and cashing in on these
+                            opportunities.
+                        </p>
+
+                        <div class="space-y-4">
+                            <!-- Accordion style items -->
+                            <div
+                                class="bg-white rounded-2xl p-5 border border-brand-100 shadow-sm flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
+                                    <span class="font-bold text-brand-600">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg mb-1">Indian Carbon Market (ICM)</h4>
+                                    <p class="text-sm text-gray-600">Preparing industries for the upcoming mandatory
+                                        carbon trading scheme in India.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-5 border border-brand-100 shadow-sm flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
+                                    <span class="font-bold text-brand-600">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg mb-1">ZED Certification for MSMEs</h4>
+                                    <p class="text-sm text-gray-600">Zero Defect Zero Effect certification consulting to
+                                        unlock government financial assistance.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-2xl p-5 border border-brand-100 shadow-sm flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
+                                    <span class="font-bold text-brand-600">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg mb-1">PAT Scheme & PRSF</h4>
+                                    <p class="text-sm text-gray-600">Navigating Perform Achieve Trade (PAT) and Partial
+                                        Risk Sharing Facility (PRSF) financing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schemes-visual relative opacity-0 translate-x-[50px] flex justify-center py-12">
+                        <div id="regulatory-orbit-container"
+                            class="w-full max-w-sm aspect-square rounded-full border border-dashed border-brand-300 relative">
+
+                            <!-- Orbiting items -->
+                            <div
+                                class="orbiting-item absolute bg-white px-5 py-2.5 rounded-xl shadow-lg border border-brand-100 flex flex-col items-center whitespace-nowrap">
+                                <span class="font-bold text-brand-600 text-lg">Tax Benefits</span>
+                                <span class="text-[10px] text-gray-500">Accelerated Depreciation</span>
+                            </div>
+
+                            <div
+                                class="orbiting-item absolute bg-white px-5 py-2.5 rounded-xl shadow-lg border border-brand-100 flex flex-col items-center whitespace-nowrap">
+                                <span class="font-bold text-brand-600 text-lg">Subsidies</span>
+                                <span class="text-[10px] text-gray-500">Capital Investments</span>
+                            </div>
+
+                            <div
+                                class="orbiting-item absolute bg-white px-5 py-2.5 rounded-xl shadow-lg border border-brand-100 flex flex-col items-center whitespace-nowrap">
+                                <span class="font-bold text-brand-600 text-lg">Energy Certs</span>
+                                <span class="text-[10px] text-gray-500">Tradable RECs</span>
+                            </div>
+
+                            <div
+                                class="orbiting-item absolute bg-white px-5 py-2.5 rounded-xl shadow-lg border border-brand-100 flex flex-col items-center whitespace-nowrap">
+                                <span class="font-bold text-brand-600 text-lg">Grants</span>
+                                <span class="text-[10px] text-gray-500">Innovation Funding</span>
+                            </div>
+
+                            <!-- Central MSME Card -->
+                            <div class="absolute inset-0 flex items-center justify-center p-8">
+                                <div id="central-msme"
+                                    class="bg-gradient-to-br from-brand-500 to-brand-700 w-36 h-36 rounded-full shadow-2xl flex items-center justify-center flex-col text-white relative z-10 border-4 border-white/20">
+                                    <div class="absolute inset-0 rounded-full animate-ping bg-brand-400 opacity-20">
+                                    </div>
+                                    <i data-lucide="shield" class="w-10 h-10 mb-1"></i>
+                                    <span class="font-bold uppercase text-xs tracking-widest">Your MSME</span>
+                                </div>
+                                <!-- Decorative ripple -->
+                                <div class="absolute w-44 h-44 rounded-full border border-brand-200/50 animate-pulse">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <!-- How We Work Section -->
+        <section id="process" class="py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-20 process-header opacity-0 translate-y-8">
+                    <h2 class="font-display text-4xl font-bold text-gray-900 mb-6">
+                        Seamless Execution. <span class="text-gradient">Measurable Impact.</span>
+                    </h2>
+                    <p class="text-lg text-gray-600">Our structured 6-step approach takes you from initial assessment to
+                        monetized carbon credits.</p>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Vertical Line (Desktop) -->
+                    <div
+                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-earth-200 -translate-x-1/2 process-line origin-top scale-y-0">
+                    </div>
+
+                    <div class="space-y-12">
+                        <!-- Step 1 -->
+                        <div
+                            class="relative flex flex-col md:flex-row items-center justify-between group process-step opacity-0 translate-y-8">
+                            <div class="md:w-5/12 text-right md:pr-12 mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">1. Footprint Assessment</h3>
+                                <p class="text-gray-600 text-sm">Comprehensive GHG inventory across Scope 1, 2, and 3
+                                    emissions as per global standards.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 w-12 h-12 bg-white rounded-full border-4 border-brand-100 flex items-center justify-center -translate-x-1/2 shadow-lg group-hover:border-brand-500 transition-colors z-10">
+                                <i data-lucide="search" class="w-5 h-5 text-brand-600"></i>
+                            </div>
+                            <div class="md:w-5/12 w-full pl-20 md:pl-12">
+                                <div class="bg-earth-50 rounded-2xl p-4 border border-earth-100">
+                                    <p class="text-xs font-medium text-brand-700">Deliverable:</p>
+                                    <p class="text-sm font-semibold text-gray-900">Baseline Emission Report</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div
+                            class="relative flex flex-col md:flex-row-reverse items-center justify-between group process-step opacity-0 translate-y-8">
+                            <div class="md:w-5/12 text-left md:pl-12 mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2. Opportunity ID</h3>
+                                <p class="text-gray-600 text-sm">Identifying precise operational tweaks, renewable
+                                    switches, or tech upgrades to slash emissions.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 w-12 h-12 bg-white rounded-full border-4 border-brand-100 flex items-center justify-center -translate-x-1/2 shadow-lg group-hover:border-brand-500 transition-colors z-10">
+                                <i data-lucide="lightbulb" class="w-5 h-5 text-brand-600"></i>
+                            </div>
+                            <div class="md:w-5/12 w-full pl-20 md:pr-12 text-left md:text-right">
+                                <div class="bg-earth-50 rounded-2xl p-4 border border-earth-100">
+                                    <p class="text-xs font-medium text-brand-700">Deliverable:</p>
+                                    <p class="text-sm font-semibold text-gray-900">Reduction Strategy Roadmap</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div
+                            class="relative flex flex-col md:flex-row items-center justify-between group process-step opacity-0 translate-y-8">
+                            <div class="md:w-5/12 text-right md:pr-12 mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">3. Project Development</h3>
+                                <p class="text-gray-600 text-sm">Structuring projects under Verra, Gold Standard or ICM
+                                    based on chosen interventions.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 w-12 h-12 bg-white rounded-full border-4 border-brand-100 flex items-center justify-center -translate-x-1/2 shadow-lg group-hover:border-brand-500 transition-colors z-10">
+                                <i data-lucide="folder-cog" class="w-5 h-5 text-brand-600"></i>
+                            </div>
+                            <div class="md:w-5/12 w-full pl-20 md:pl-12">
+                                <div class="bg-earth-50 rounded-2xl p-4 border border-earth-100">
+                                    <p class="text-xs font-medium text-brand-700">Deliverable:</p>
+                                    <p class="text-sm font-semibold text-gray-900">Project Design Document (PDD)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div
+                            class="relative flex flex-col md:flex-row-reverse items-center justify-between group process-step opacity-0 translate-y-8">
+                            <div class="md:w-5/12 text-left md:pl-12 mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">4. Validation & Registration</h3>
+                                <p class="text-gray-600 text-sm">Liaising with third-party auditors and registries to
+                                    get the project officially certified.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 w-12 h-12 bg-white rounded-full border-4 border-brand-100 flex items-center justify-center -translate-x-1/2 shadow-lg group-hover:border-brand-500 transition-colors z-10">
+                                <i data-lucide="stamp" class="w-5 h-5 text-brand-600"></i>
+                            </div>
+                            <div class="md:w-5/12 w-full pl-20 md:pr-12 text-left md:text-right">
+                                <div class="bg-earth-50 rounded-2xl p-4 border border-earth-100">
+                                    <p class="text-xs font-medium text-brand-700">Deliverable:</p>
+                                    <p class="text-sm font-semibold text-gray-900">Registered Project Status</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div
+                            class="relative flex flex-col md:flex-row items-center justify-between group process-step opacity-0 translate-y-8">
+                            <div class="md:w-5/12 text-right md:pr-12 mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">5. Monitoring & Verif.</h3>
+                                <p class="text-gray-600 text-sm">Ongoing data tracking of emission reductions to request
+                                    issuance of Carbon Credits.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 w-12 h-12 bg-white rounded-full border-4 border-brand-100 flex items-center justify-center -translate-x-1/2 shadow-lg group-hover:border-brand-500 transition-colors z-10">
+                                <i data-lucide="clipboard-check" class="w-5 h-5 text-brand-600"></i>
+                            </div>
+                            <div class="md:w-5/12 w-full pl-20 md:pl-12">
+                                <div class="bg-earth-50 rounded-2xl p-4 border border-earth-100">
+                                    <p class="text-xs font-medium text-brand-700">Deliverable:</p>
+                                    <p class="text-sm font-semibold text-gray-900">Verified Carbon Units (VCUs)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div
+                            class="relative flex flex-col md:flex-row-reverse items-center justify-between group process-step opacity-0 translate-y-8">
+                            <div class="md:w-5/12 text-left md:pl-12 mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">6. Monetization</h3>
+                                <p class="text-gray-600 text-sm">Trading the issued credits on domestic or international
+                                    carbon markets for premium prices.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center -translate-x-1/2 shadow-[0_0_20px_rgba(22,163,74,0.4)] z-10">
+                                <i data-lucide="dollar-sign" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="md:w-5/12 w-full pl-20 md:pr-12 text-left md:text-right">
+                                <div
+                                    class="bg-gradient-to-r from-brand-600 to-brand-800 rounded-2xl p-4 shadow-lg text-white">
+                                    <p class="text-xs font-medium text-brand-200">Result:</p>
+                                    <p class="text-sm font-semibold">Realized Financial Revenue</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies"
+            class="py-24 bg-gray-950 text-white overflow-hidden relative border-t border-gray-900">
+            <!-- Background pattern -->
+            <div
+                class="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-end mb-16 cs-header opacity-0 translate-y-8">
+                    <div>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                            Proven <span class="text-brand-400">Impact</span>
+                        </h2>
+                        <p class="text-gray-400 max-w-xl">Real businesses. Real emission reductions. Real financial
+                            returns.</p>
+                    </div>
+                    <div class="mt-6 md:mt-0 flex gap-4 hidden sm:flex">
+                        <button
+                            class="w-12 h-12 rounded-full border border-gray-800 flex items-center justify-center hover:bg-gray-800 transition-colors text-white">
+                            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                        </button>
+                        <button
+                            class="w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center hover:bg-brand-500 transition-colors text-white">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-nowrap gap-6 overflow-x-auto pb-8 no-scrollbar cs-slider cursor-grab">
+                    <!-- Case 1 -->
+                    <div
+                        class="shrink-0 w-[400px] bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="assets/plastic_recycling.png" alt="Recycling facility"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+                            <div
+                                class="absolute bottom-4 left-6 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">
+                                Plastic Recycling</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold mb-4 line-clamp-2">Gujarat recycling plant generates credits
+                                via circular economy</h3>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <p class="text-xs text-gray-400 font-medium uppercase mb-1">Impact</p>
+                                    <p class="font-bold text-brand-400 text-lg">12,000 tCO2e</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-medium uppercase mb-1">New Revenue</p>
+                                    <p class="font-bold text-white text-lg">₹ 1.8 Cr/yr</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-6">Transitioned facility to run completely on renewable
+                                power, while generating credits from preventing virgin plastic production.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors">Read
+                                Full Case <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Case 2 -->
+                    <div
+                        class="shrink-0 w-[400px] bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="assets/brick_kiln.png" alt="Brick Kiln"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+                            <div
+                                class="absolute bottom-4 left-6 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">
+                                Brick Manufacturing</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold mb-4 line-clamp-2">MSME Brick Kiln Reduces Emissions by 35%
+                                through design shift</h3>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <p class="text-xs text-gray-400 font-medium uppercase mb-1">Impact</p>
+                                    <p class="font-bold text-brand-400 text-lg">8,500 tCO2e</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-medium uppercase mb-1">Subsidy Secured</p>
+                                    <p class="font-bold text-white text-lg">₹ 45 Lakhs</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-6">Upgraded traditional kilns to zig-zag technology,
+                                saving coal and leveraging government ZED schemes to fund the transition.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors">Read
+                                Full Case <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Case 3 -->
+                    <div
+                        class="shrink-0 w-[400px] bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="assets/poultry_biogas.png" alt="Poultry Farm"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+                            <div
+                                class="absolute bottom-4 left-6 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">
+                                Poultry & Agriculture</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold mb-4 line-clamp-2">Commercial Poultry Farm Converts Methane to
+                                High-Value Credits</h3>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <p class="text-xs text-gray-400 font-medium uppercase mb-1">Impact</p>
+                                    <p class="font-bold text-brand-400 text-lg">25,000 tCO2e</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-medium uppercase mb-1">IRR</p>
+                                    <p class="font-bold text-white text-lg">28%</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-6">Implemented a covered lagoon biodigester to capture
+                                methane, flaring it to reduce GHG potency and earning premium carbon credits.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors">Read
+                                Full Case <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights / Blog Section -->
+        <section class="py-24 bg-earth-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold mb-4 shadow-sm border border-brand-200/50">
+                            Insights & News
+                        </div>
+                        <h2 class="font-display text-4xl font-bold text-gray-900">Carbon Markets <span
+                                class="text-gradient">Explained</span></h2>
+                    </div>
+                    <a href="#"
+                        class="hidden sm:inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800 transition-colors">View
+                        All Articles <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 blog-grid opacity-0">
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md shadow-earth-200 border border-gray-100 group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="assets/govt_building.png" alt="Market Rules"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Carbon
+                                    Markets India</span>
+                                <span class="text-xs text-gray-400">Oct 12, 2026</span>
+                            </div>
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors">
+                                What the National Steering Committee's Latest Ruling Means for MSMEs</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">A deep dive into the recent regulatory changes
+                                in the Indian Carbon Market and how small businesses can adapt early.</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md shadow-earth-200 border border-gray-100 group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="assets/about_industry.png" alt="Sustainability Strategy"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">ESG
+                                    Consulting India</span>
+                                <span class="text-xs text-gray-400">Sep 28, 2026</span>
+                            </div>
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors">
+                                5 Steps to Create a Bulletproof Net Zero Roadmap for Manufacturing</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">Investors are demanding ESG compliance. Here
+                                is a practical framework for heavy industries to transition smoothly.</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md shadow-earth-200 border border-gray-100 group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="assets/poultry_biogas.png" alt="Carbon Credit Project Example"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Carbon
+                                    Credits India</span>
+                                <span class="text-xs text-gray-400">Sep 15, 2026</span>
+                            </div>
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors">
+                                Understanding Verra vs Gold Standard: A Guide for Project Developers</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">Choosing the right registry is crucial for
+                                maximizing credit value. We compare the leading international standards.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gray-950 rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row relative">
+                    <!-- Decor -->
+                    <div
+                        class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-600/20 rounded-full blur-[100px] pointer-events-none">
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="lg:w-5/12 p-12 lg:p-16 flex flex-col justify-between relative z-10 z-20 bg-gray-900">
+                        <div>
+                            <h2 class="font-display text-4xl font-bold text-white mb-6">Ready to lead the transition?
+                            </h2>
+                            <p class="text-gray-400 mb-10">Get a free, preliminary assessment of your carbon credit
+                                potential and sustainability gaps.</p>
+
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-brand-400 border border-gray-700">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 font-medium">Headquarters</p>
+                                        <p class="text-white font-medium">Mumbai, Maharashtra, India</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-brand-400 border border-gray-700">
+                                        <i data-lucide="mail" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 font-medium">Email Us</p>
+                                        <p class="text-white font-medium">mahir@indiancarbonconsulting.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-brand-400 border border-gray-700">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500 font-medium">Call Us</p>
+                                        <p class="text-white font-medium">+91 7900065016</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="lg:w-7/12 p-12 lg:p-16 relative z-10">
+                        <h3 class="text-2xl font-bold text-white mb-8">Get Your Free Carbon Opportunity Assessment</h3>
+                        <form id="contact-form" action="https://formsubmit.co/mahir@indiancarbonconsulting.com"
+                            method="POST" class="space-y-6">
+                            <!-- Disable Captcha for smoother UX (optional) -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Specify a subject -->
+                            <input type="hidden" name="_subject" value="New Website Assessment Request!">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
+                                    <input type="text" name="name" required
+                                        class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
+                                        placeholder="Ramesh Patel">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Company Name</label>
+                                    <input type="text" name="company"
+                                        class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
+                                        placeholder="XYZ Manufacturing Corp">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Industry Sector</label>
+                                    <select name="industry" required
+                                        class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors appearance-none">
+                                        <option value="" disabled selected>Select an industry...</option>
+                                        <option value="manufacturing">Manufacturing (General)</option>
+                                        <option value="recycling">Recycling & Waste Mgmt</option>
+                                        <option value="agriculture">Agriculture & Poultry</option>
+                                        <option value="chemical">Chemical Processing</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                                    <input type="email" name="email" required
+                                        class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
+                                        placeholder="ramesh@xyzcorp.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">How can we assist
+                                    you?</label>
+                                <textarea name="message" rows="4" required
+                                    class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
+                                    placeholder="Tell us about your operations and any immediate sustainability goals..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-4 rounded-xl bg-brand-600 text-white font-bold text-lg hover:bg-brand-500 transition-all shadow-[0_0_20px_rgba(22,163,74,0.3)] transform hover:-translate-y-1">
+                                Request Assessment Now
+                            </button>
+                            <div id="form-status" class="hidden text-center p-3 rounded-lg font-medium"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-950 text-white pt-20 pb-10 border-t border-gray-900 relative overflow-hidden">
+            <!-- Decorative bg -->
+            <div
+                class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-900/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="lg:col-span-1">
+                        <div class="flex items-center mb-6">
+                            <img src="assets/icc_logo.png" alt="Indian Carbon Consultancy Logo"
+                                class="h-20 w-auto object-contain brightness-0 invert">
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 max-w-sm">
+                            Accelerating India's transition to a low-carbon economy. We help MSMEs and industries
+                            measure,
+                            reduce, and monetize their carbon footprint.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-brand-600 transition-colors">
+                                <i data-lucide="linkedin" class="w-4 h-4 text-white"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-brand-600 transition-colors">
+                                <i data-lucide="twitter" class="w-4 h-4 text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div>
+                        <h4 class="font-display font-semibold text-white mb-6">Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Carbon
+                                    Accounting</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Credit
+                                    Project Development</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Carbon
+                                    Market Advisory</a></li>
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Sustainability
+                                    &
+                                    ESG</a></li>
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Government
+                                    Schemes</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Industries -->
+                    <div>
+                        <h4 class="font-display font-semibold text-white mb-6">Industries</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Manufacturing
+                                    Units</a></li>
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Recycling
+                                    Plants</a></li>
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Agriculture
+                                    & Poultry</a></li>
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Chemical &
+                                    Construction</a></li>
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">Renewable
+                                    Energy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="font-display font-semibold text-white mb-6">Contact Us</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-500 mt-0.5 shrink-0"></i>
+                                <span class="text-gray-400 text-sm">Mumbai, Maharashtra<br>India</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                                <a href="mailto:mahir@indiancarbonconsulting.com"
+                                    class="text-gray-400 hover:text-brand-400 text-sm transition-colors">mahir@indiancarbonconsulting.com</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                                <span class="text-gray-400 text-sm">+91 7900065016</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom -->
+                <div class="pt-8 border-t border-gray-900 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-gray-500 text-sm">© 2026 Indian Carbon Consultancy. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of
+                            Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- App Logic -->
+        <script src="index.js"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+</body>
+
+</html>
